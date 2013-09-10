@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">RWTH Forum</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="token">Your token!!</string>
+    <string name="done">Done</string>
+    <string name="enter">..Enter The Course Room..</string>
+    <string name="invalid_token">Enter a valid token</string>
+    <string name="validating">Validating</string>
+    <string name="task_msg">Connecting to the server..</string>
+    <string name="refresh">Refresh</string>
+    <string name="semester">Semester</string>
+    <string name="new_thread">Start a New Discussion</string>
+    <string name="new_thread1">New Thread</string>
+    <string name="new_post">Add Post</string>
+    <string name="title">Title</string>
+    <string name="body">Body......................</string>
+    <string name="Body">Body:</string>
+    <string name="post_body">Write your post data here........</string>
+    <string name="thread_body">Write your thread data here........</string>
+    <string name="thread_title">Thread Subject</string>
+    <string name="auth_pending">Authentication is pending..</string>
+    <string name="submit">Submit</string>
+    <string name="course_room">My Current Courses</string>
+    <string name="title_null">Subject field can not be left blank</string>
+    <string name="body_null">Body field can not be left blank</string>
+    <string name="thread_added">New thread successfully created</string>
+    <string name="your_courses">Enrolled courses:</string>
+    <string name="threads">Threads:</string>
+    <string name="posts">Posts: </string>
+    <string name="reply">Reply </string>
+
+</resources>

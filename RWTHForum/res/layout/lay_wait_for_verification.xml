@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    android:background="@drawable/wait">
+
+    <Button
+        android:id="@+id/bVerify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="17dp"
+        android:text="Take me to the Link" />
+
+    <TextView
+        android:id="@+id/tUser_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bVerify"
+        android:layout_alignLeft="@+id/tUsercode"
+        android:layout_alignRight="@+id/tUsercode"
+        android:layout_marginBottom="45dp"
+        android:gravity="center"
+        android:hint="Wait"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tUsercode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tUser_code"
+        android:layout_alignLeft="@+id/tVerification_url"
+        android:layout_alignRight="@+id/tVerification_url"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:text="User Code"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/tVerification_url"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tVer_url"
+        android:layout_alignRight="@+id/tVer_url"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:hint="Wait"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tVer_url"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tVerification_url"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="Verification URL"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+</RelativeLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+       
+        android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+        android:orientation="horizontal"
+         >
+
+        <TextView
+            android:id="@+id/headingL"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/lay_textview_shape"
+            android:hint="@string/title"
+            android:padding="5dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#000000" />
+
+        <Button
+            android:id="@+id/reply"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/lay_textview_shape"
+            android:padding="1dp"
+            android:text="@string/reply"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#000000" />
+
+          </LinearLayout>
+         
+     <TextView
+         android:id="@+id/bodyL"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="3dp"
+         android:layout_marginLeft="2dp"
+         android:layout_marginRight="2dp"
+          android:layout_marginBottom="8dp"
+         android:background="@drawable/lay_textview_shape"
+         android:hint="@string/body"
+         android:padding="5dp"
+         android:textAppearance="?android:attr/textAppearanceMedium"
+         android:textColor="#000000" />
+   
+    
+
+    
+    
+</LinearLayout>
