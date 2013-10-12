@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">bla bla bla</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_search">Search</string>
+
+    <string name="action_foo0">item 1</string>
+    <string name="action_foo1">item 2</string>
+    <string name="action_foo2">item 3</string>
+    <string name="action_foo3">item 4</string>
+</resources>
