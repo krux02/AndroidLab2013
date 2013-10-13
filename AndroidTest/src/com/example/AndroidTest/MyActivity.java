@@ -7,6 +7,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import java.io.BufferedReader;
@@ -27,6 +28,8 @@ public class MyActivity extends Activity {
             @Override
             public void onClick(View view) {
                 TextView tv = (TextView) findViewById(R.id.textView);
+                ProgressBar pg = (ProgressBar) findViewById(R.id.progressBar);
+
                 tv.setText("function starts here");
 
                 new Retrieve().execute(tv);

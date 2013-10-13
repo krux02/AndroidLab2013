@@ -19,7 +19,6 @@ public class ProgressTestActivity extends Activity {
         setContentView(R.layout.main);
         bar = (ProgressBar) findViewById(R.id.progressBar);
         text = (TextView) findViewById(R.id.textView);
-
     }
 
     public void startProgress(View view) {

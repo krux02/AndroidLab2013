@@ -9,16 +9,27 @@
             android:layout_height="wrap_content"
             android:text="Hello World, MyActivity"
             />
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New Button"
-        android:id="@+id/internet_test" android:layout_gravity="center"/>
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" android:layout_gravity="right|center_vertical">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Internet Test"
+            android:id="@+id/internet_test"/>
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Test ProgressBar"
+            android:onClick="startProgress"
+            android:id="@+id/button_progress_bar" android:layout_gravity="center"/>
+    </TableRow>
     <ProgressBar
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         style="?android:progressBarStyleHorizontal"
         android:id="@+id/progressBar"/>
+
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
