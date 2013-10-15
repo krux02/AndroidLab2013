@@ -2,38 +2,16 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
               android:layout_width="fill_parent"
-              android:layout_height="fill_parent"
-        >
-    <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="Hello World, MyActivity"
-            />
-    <TableRow
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content" android:layout_gravity="right|center_vertical">
-        <Button
+              android:layout_height="fill_parent">
+    <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Internet Test"
-            android:id="@+id/internet_test"/>
-        <Button
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="Test ProgressBar"
-            android:onClick="startProgress"
-            android:id="@+id/button_progress_bar" android:layout_gravity="center"/>
-    </TableRow>
-    <ProgressBar
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        style="?android:progressBarStyleHorizontal"
-        android:id="@+id/progressBar"/>
-
+            android:text="Load from Internet"
+            android:id="@+id/download" android:layout_gravity="center"
+            android:onClick="onClick"/>
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="New Text"
-        android:id="@+id/textView"/>
+        android:text="Here will be text from internet"
+        android:id="@+id/internet_text"/>
 </LinearLayout>
-

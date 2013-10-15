@@ -11,21 +11,4 @@
     <item android:id="@+id/action_setings"
           android:title="@string/action_settings"
           android:showAsAction="never" />
-
-    <!-- Buttons -->
-    <item android:id="@+id/action_setings"
-          android:title="@string/action_foo0"
-          android:showAsAction="never" />
-
-    <item android:id="@+id/action_setings"
-          android:title="@string/action_foo1"
-          android:showAsAction="never" />
-
-    <item android:id="@+id/action_setings"
-          android:title="@string/action_foo2"
-          android:showAsAction="never" />
-
-    <item android:id="@+id/action_setings"
-          android:title="@string/action_foo3"
-          android:showAsAction="never" />
 </menu>

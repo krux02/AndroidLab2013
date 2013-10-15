@@ -18,6 +18,7 @@
         <processorPath useClasspath="true" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel target="1.6" />
   </component>
   <component name="JavacSettings">
     <option name="MAXIMUM_HEAP_SIZE" value="1024" />
