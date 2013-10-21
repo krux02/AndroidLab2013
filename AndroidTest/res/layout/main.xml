@@ -1,17 +1,31 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:layout_width="fill_parent"
-              android:layout_height="fill_parent">
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:baselineAligned="false"
+                tools:context=".MainActivity"
+                android:id="@+id/main">
     <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Load from Internet"
-            android:id="@+id/download" android:layout_gravity="center"
-            android:onClick="onClick"/>
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="Here will be text from internet"
-        android:id="@+id/internet_text"/>
+            android:text="New Button"
+            android:id="@+id/button"
+            android:layout_gravity="left|center_vertical"
+            android:onClick="buttonClick"/>
+
+    <ListView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/list_left"
+            android:layout_weight="4"
+            android:background="#3f1f1f"
+            />
+    <ExpandableListView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:id="@+id/list_right"
+            android:background="#343b28"/>
+
 </LinearLayout>
