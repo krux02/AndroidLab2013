@@ -2,19 +2,20 @@ package com.example.AndroidTest;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 /**
 * User: arne
 * Date: 15.10.13
 * Time: 18:35
 */
-public class Topic {
+public class UrlTopic {
     private String name;
-    private UrlEntry[] entries;
+    private List<UrlEntry> entries;
 
-    public Topic(String name, UrlEntry... entries) {
+    public UrlTopic(String name, List<UrlEntry> entries) {
         this.name = name;
-        this.entries = Arrays.copyOf(entries,entries.length);
+        this.entries = entries;
     }
 
     public String getName() {
@@ -25,19 +26,19 @@ public class Topic {
         this.name = name;
     }
 
-    public UrlEntry[] getEntries() {
-        return Arrays.copyOf(entries, entries.length);
+    public List<UrlEntry> getEntries() {
+        return entries;
     }
 
-    public void setEntries(UrlEntry[] entries) {
-        this.entries = Arrays.copyOf(entries, entries.length);
+    public void setEntries(List<UrlEntry> entries) {
+        this.entries = entries;
     }
 
     @Override
     public String toString() {
-        return "Topic{" +
+        return "UrlTopic{" +
                 "name='" + name + '\'' +
-                ", entries=" + Arrays.toString(entries) +
+                ", entries=" + entries +
                 '}';
     }
 }

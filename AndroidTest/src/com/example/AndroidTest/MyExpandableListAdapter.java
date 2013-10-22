@@ -2,17 +2,15 @@ package com.example.AndroidTest;
 
 import android.content.Context;
 import android.database.MatrixCursor;
-import android.graphics.Color;
 import android.graphics.Typeface;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.TextView;
 
-import java.util.ArrayList;
-import java.util.LinkedHashMap;
-import java.util.Random;
+import java.util.*;
 
 /**
  * User: arne
@@ -20,88 +18,62 @@ import java.util.Random;
  * Time: 20:19
  */
 public class MyExpandableListAdapter extends BaseExpandableListAdapter {
-    MatrixCursor data;
+    public static String TAG = "MyExpandableListAdapter";
 
-    ArrayList<Integer> groupColors;
-    ArrayList<String> groupNames;
-    ArrayList<ArrayList<Integer>> groupId2Topic;
+    List<Integer> categoryColors  = new ArrayList<Integer>();
+    List<UrlCategory> data;
     Context context;
 
-    private static void setMatrixLine(MatrixCursor matrix, int line) {
-        while(matrix.getPosition() < line)
-            matrix.moveToNext();
-        while(matrix.getPosition() > line)
-            matrix.moveToPrevious();
-    }
-
-    MyExpandableListAdapter(Context context, MatrixCursor data) {
+    MyExpandableListAdapter(Context context, List<List<String>> data) {
         this.context = context;
-        this.data = data;
-
-
-        LinkedHashMap<String, Integer> group2topicsId = new LinkedHashMap<String, Integer>();
-        groupId2Topic = new ArrayList<ArrayList<Integer>>();
-        groupNames = new ArrayList<String>();
-        groupColors = new ArrayList<Integer>();
-
+        this.data = UrlBuilder.buildCategories(data);
         Random r = new Random();
 
-        data.moveToFirst();
-        while (!data.isAfterLast()) {
-            String groupName = data.getString(0);
-            if( !group2topicsId.containsKey(groupName) ) {
-                group2topicsId.put(groupName, groupNames.size());
-                groupNames.add(groupName);
-                groupId2Topic.add(new ArrayList<Integer>());
-                groupColors.add((r.nextInt() & 0x3f3f3f) | 0xff000000);
-            }
-            int id = group2topicsId.get(groupName);
-            assert(groupNames.get(id).compareTo(groupName) == 0);
-            groupId2Topic.get(id).add(data.getPosition());
-            data.moveToNext();
-        }
+        Log.d(TAG, this.data.toString());
+        for(UrlCategory ignored : this.data) categoryColors.add((r.nextInt() & 0x3f3f3f) | 0xff000000);
+
     }
 
     MyExpandableListAdapter(Context context) {
         this(context, getData());
     }
 
-    private static MatrixCursor getData() {
-        MatrixCursor mat = new MatrixCursor(new String[]{"group", "topic", "description", "url"});
-        mat.addRow(new String[]{"course", "course Topic 1", "bla bla",   "www.example.com"});
-        mat.addRow(new String[]{"course", "course Topic 1", "blub blub", "www.example.com"});
-        mat.addRow(new String[]{"course", "course Topic 2", "Beispiel", "www.example.com"});
-        mat.addRow(new String[]{"course", "course Topic 2", "Bleistift", "www.example.com"});
-        mat.addRow(new String[]{"course", "course Topic 3", "foo", "www.example.com"});
-        mat.addRow(new String[]{"course", "course Topic 3", "bar", "www.example.com"});
-        mat.addRow(new String[]{"group", "group Topic 1", "foobar",   "www.example.com"});
-        mat.addRow(new String[]{"group", "group Topic 1", "baz", "www.example.com"});
-        mat.addRow(new String[]{"group", "group Topic 2", "lolo", "www.example.com"});
-        mat.addRow(new String[]{"group", "group Topic 2", "Pizza", "www.example.com"});
-        mat.addRow(new String[]{"group", "group Topic 3", "Wurst", "www.example.com"});
-        mat.addRow(new String[]{"group", "group Topic 3", "Brot", "www.example.com"});
-        return mat;
+    private static ArrayList<List<String>> getData() {
+        String[] names = new String[]{"group", "topic", "description", "url"};
+        ArrayList<List<String>> data = new ArrayList<List<String>>();
+        data.add(Arrays.asList("course", "course Topic 1", "bla bla", "www.example.com"));
+        data.add(Arrays.asList("course", "course Topic 1", "blub blub", "www.example.com"));
+        data.add(Arrays.asList("course", "course Topic 2", "Beispiel", "www.example.com"));
+        data.add(Arrays.asList("course", "course Topic 2", "Bleistift", "www.example.com"));
+        data.add(Arrays.asList("course", "course Topic 3", "foo", "www.example.com"));
+        data.add(Arrays.asList("course", "course Topic 3", "bar", "www.example.com"));
+        data.add(Arrays.asList("group", "group Topic 1", "foobar", "www.example.com"));
+        data.add(Arrays.asList("group", "group Topic 1", "baz", "www.example.com"));
+        data.add(Arrays.asList("group", "group Topic 2", "lolo", "www.example.com"));
+        data.add(Arrays.asList("group", "group Topic 2", "Pizza", "www.example.com"));
+        data.add(Arrays.asList("group", "group Topic 3", "Wurst", "www.example.com"));
+        data.add(Arrays.asList("group", "group Topic 3", "Brot", "www.example.com"));
+        return data;
     }
-
 
     @Override
     public int getGroupCount() {
-        return  groupNames.size();
+        return  data.size();
     }
 
     @Override
     public int getChildrenCount(int i) {
-        return groupId2Topic.get(i).size();
+        return data.get(i).getCourse().size();
     }
 
     @Override
     public String getGroup(int i) {
-        return groupNames.get(i);
+        return data.get(i).getName();
     }
 
     @Override
-    public Integer getChild(int groupPosition, int childPosition) {
-        return groupId2Topic.get(groupPosition).get(childPosition);
+    public UrlTopic getChild(int groupPosition, int childPosition) {
+        return data.get(groupPosition).getCourse().get(childPosition);
     }
 
     @Override
@@ -127,7 +99,7 @@ public class MyExpandableListAdapter extends BaseExpandableListAdapter {
             convertView = inflater.inflate(R.layout.list_group, null);
         }
 
-        convertView.setBackgroundColor(groupColors.get(groupPosition) + 0x101010);
+        convertView.setBackgroundColor(categoryColors.get(groupPosition) + 0x101010);
 
         TextView lblListHeader = (TextView) convertView.findViewById(R.id.lblListHeader);
         lblListHeader.setTypeface(null, Typeface.BOLD);
@@ -138,9 +110,7 @@ public class MyExpandableListAdapter extends BaseExpandableListAdapter {
 
     @Override
     public View getChildView(int groupPosition, int childPosition, boolean isLastChild, View convertView, ViewGroup parent) {
-        Integer line = getChild(groupPosition, childPosition);
-        setMatrixLine(data,line);
-        //String childText =  + " --- " + data.getString(3);
+        UrlTopic entry = data.get(groupPosition).getCourse().get(childPosition);
 
         if (convertView == null) {
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -149,9 +119,9 @@ public class MyExpandableListAdapter extends BaseExpandableListAdapter {
 
         TextView txtListChild = (TextView) convertView.findViewById(R.id.lblListItem);
         TextView bottomChild = (TextView) convertView.findViewById(R.id.bottom_list);
-        convertView.setBackgroundColor(groupColors.get(groupPosition));
-        txtListChild.setText(data.getString(2));
-        bottomChild.setText(data.getString(3));
+        convertView.setBackgroundColor(categoryColors.get(groupPosition));
+        txtListChild.setText(entry.getName());
+        bottomChild.setText(entry.getName());
         return convertView;
     }
 
@@ -161,4 +131,55 @@ public class MyExpandableListAdapter extends BaseExpandableListAdapter {
     }
 }
 
+class SubListAdapter extends BaseExpandableListAdapter {
 
+    @Override
+    public int getGroupCount() {
+        return 0;  //To change body of implemented methods use File | Settings | File Templates.
+    }
+
+    @Override
+    public int getChildrenCount(int i) {
+        return 0;  //To change body of implemented methods use File | Settings | File Templates.
+    }
+
+    @Override
+    public Object getGroup(int i) {
+        return null;  //To change body of implemented methods use File | Settings | File Templates.
+    }
+
+    @Override
+    public Object getChild(int i, int i2) {
+        return null;  //To change body of implemented methods use File | Settings | File Templates.
+    }
+
+    @Override
+    public long getGroupId(int i) {
+        return 0;  //To change body of implemented methods use File | Settings | File Templates.
+    }
+
+    @Override
+    public long getChildId(int i, int i2) {
+        return 0;  //To change body of implemented methods use File | Settings | File Templates.
+    }
+
+    @Override
+    public boolean hasStableIds() {
+        return false;  //To change body of implemented methods use File | Settings | File Templates.
+    }
+
+    @Override
+    public View getGroupView(int i, boolean b, View view, ViewGroup viewGroup) {
+        return null;  //To change body of implemented methods use File | Settings | File Templates.
+    }
+
+    @Override
+    public View getChildView(int i, int i2, boolean b, View view, ViewGroup viewGroup) {
+        return null;  //To change body of implemented methods use File | Settings | File Templates.
+    }
+
+    @Override
+    public boolean isChildSelectable(int i, int i2) {
+        return false;  //To change body of implemented methods use File | Settings | File Templates.
+    }
+}
