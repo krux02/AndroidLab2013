@@ -53,7 +53,7 @@ public class MyExpandableListAdapter extends BaseExpandableListAdapter {
                 group2topicsId.put(groupName, groupNames.size());
                 groupNames.add(groupName);
                 groupId2Topic.add(new ArrayList<Integer>());
-                groupColors.add(Color.rgb(r.nextInt() % 84, r.nextInt() % 84, r.nextInt() % 84));
+                groupColors.add((r.nextInt() & 0x3f3f3f) | 0xff000000);
             }
             int id = group2topicsId.get(groupName);
             assert(groupNames.get(id).compareTo(groupName) == 0);
@@ -127,6 +127,8 @@ public class MyExpandableListAdapter extends BaseExpandableListAdapter {
             convertView = inflater.inflate(R.layout.list_group, null);
         }
 
+        convertView.setBackgroundColor(groupColors.get(groupPosition) + 0x101010);
+
         TextView lblListHeader = (TextView) convertView.findViewById(R.id.lblListHeader);
         lblListHeader.setTypeface(null, Typeface.BOLD);
         lblListHeader.setText(headerTitle);
@@ -138,7 +140,7 @@ public class MyExpandableListAdapter extends BaseExpandableListAdapter {
     public View getChildView(int groupPosition, int childPosition, boolean isLastChild, View convertView, ViewGroup parent) {
         Integer line = getChild(groupPosition, childPosition);
         setMatrixLine(data,line);
-        String childText = data.getString(2) + data.getString(3);
+        //String childText =  + " --- " + data.getString(3);
 
         if (convertView == null) {
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -146,8 +148,10 @@ public class MyExpandableListAdapter extends BaseExpandableListAdapter {
         }
 
         TextView txtListChild = (TextView) convertView.findViewById(R.id.lblListItem);
-        txtListChild.setBackgroundColor(groupColors.get(groupPosition));
-        txtListChild.setText(childText);
+        TextView bottomChild = (TextView) convertView.findViewById(R.id.bottom_list);
+        convertView.setBackgroundColor(groupColors.get(groupPosition));
+        txtListChild.setText(data.getString(2));
+        bottomChild.setText(data.getString(3));
         return convertView;
     }
 
