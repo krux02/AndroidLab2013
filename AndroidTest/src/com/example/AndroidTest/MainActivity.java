@@ -39,7 +39,7 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
-        listRight = (ExpandableListView) findViewById(R.id.list_right);
+        listRight = (ExpandableListView) findViewById(R.id.parent_list);
         expandableAdapter = new MyExpandableListAdapter(this);
         listRight.setAdapter(expandableAdapter);
     }

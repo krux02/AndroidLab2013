@@ -9,6 +9,13 @@
         <option name="name" value="No Genymotion" />
         <option name="pid" value="" />
       </filter>
+      <filter>
+        <option name="logLevel" value="verbose" />
+        <option name="logMessagePattern" value="" />
+        <option name="logTagPattern" value="ExpandableListView" />
+        <option name="name" value="ExpandableListView" />
+        <option name="pid" value="" />
+      </filter>
     </filters>
   </component>
   <component name="AndroidDesignerProfile">
@@ -36,7 +43,7 @@
     </option>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="No Genymotion" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="ExpandableListView" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="01480a30-0b14-483d-b6b5-4bb3192a9e71" name="Default" comment="" />
@@ -47,21 +54,21 @@
     <file path="$APPLICATION_HOME_DIR$/plugins/android/lib/android.jar!/org/jetbrains/android/android.xsd" changelist="01480a30-0b14-483d-b6b5-4bb3192a9e71" time="1381527647446" ignored="false" />
     <file path="/main_activity_actions.xml" changelist="01480a30-0b14-483d-b6b5-4bb3192a9e71" time="1381532281401" ignored="false" />
     <file path="/MyActivity.java" changelist="01480a30-0b14-483d-b6b5-4bb3192a9e71" time="1381688131723" ignored="false" />
-    <file path="/AndroidManifest.xml" changelist="01480a30-0b14-483d-b6b5-4bb3192a9e71" time="1381874756441" ignored="false" />
-    <file path="$PROJECT_DIR$/gen/com/example/AndroidTest/BuildConfig.java" changelist="01480a30-0b14-483d-b6b5-4bb3192a9e71" time="1381924594805" ignored="false" />
-    <file path="$PROJECT_DIR$/gen/com/example/AndroidTest/R.java" changelist="01480a30-0b14-483d-b6b5-4bb3192a9e71" time="1381924393757" ignored="false" />
-    <file path="/main.xml" changelist="01480a30-0b14-483d-b6b5-4bb3192a9e71" time="1382120106633" ignored="false" />
+    <file path="/AndroidManifest.xml" changelist="01480a30-0b14-483d-b6b5-4bb3192a9e71" time="1384698793255" ignored="false" />
+    <file path="$PROJECT_DIR$/gen/com/example/AndroidTest/BuildConfig.java" changelist="01480a30-0b14-483d-b6b5-4bb3192a9e71" time="1384698841314" ignored="false" />
+    <file path="$PROJECT_DIR$/gen/com/example/AndroidTest/R.java" changelist="01480a30-0b14-483d-b6b5-4bb3192a9e71" time="1384698799092" ignored="false" />
+    <file path="/main.xml" changelist="01480a30-0b14-483d-b6b5-4bb3192a9e71" time="1384697793467" ignored="false" />
     <file path="/ProgressTestActivity.java" changelist="01480a30-0b14-483d-b6b5-4bb3192a9e71" time="1381581578143" ignored="false" />
     <file path="/a.html" changelist="01480a30-0b14-483d-b6b5-4bb3192a9e71" time="1381682942300" ignored="false" />
     <file path="/ReadWebpageAsyncTask.java" changelist="01480a30-0b14-483d-b6b5-4bb3192a9e71" time="1381864877199" ignored="false" />
-    <file path="/fragment.java" changelist="01480a30-0b14-483d-b6b5-4bb3192a9e71" time="1381924758502" ignored="false" />
+    <file path="/fragment.java" changelist="01480a30-0b14-483d-b6b5-4bb3192a9e71" time="1384698818633" ignored="false" />
     <file path="/StringLoader.java" changelist="01480a30-0b14-483d-b6b5-4bb3192a9e71" time="1381852128107" ignored="false" />
     <file path="/MyLoaderCallbacks.java" changelist="01480a30-0b14-483d-b6b5-4bb3192a9e71" time="1381844886792" ignored="false" />
     <file path="/UrlSet.java" changelist="01480a30-0b14-483d-b6b5-4bb3192a9e71" time="1382103317756" ignored="false" />
     <file path="/Topic.java" changelist="01480a30-0b14-483d-b6b5-4bb3192a9e71" time="1382103518092" ignored="false" />
     <file path="/FakeUrlLoader.java" changelist="01480a30-0b14-483d-b6b5-4bb3192a9e71" time="1382102774285" ignored="false" />
     <file path="/a.dummy" changelist="01480a30-0b14-483d-b6b5-4bb3192a9e71" time="1381854952579" ignored="false" />
-    <file path="/Dummy.txt" changelist="01480a30-0b14-483d-b6b5-4bb3192a9e71" time="1382123474132" ignored="false" />
+    <file path="/Dummy.txt" changelist="01480a30-0b14-483d-b6b5-4bb3192a9e71" time="1384701321103" ignored="false" />
     <file path="/UrlElement.xml" changelist="01480a30-0b14-483d-b6b5-4bb3192a9e71" time="1381861898325" ignored="false" />
     <file path="/url_element.xml" changelist="01480a30-0b14-483d-b6b5-4bb3192a9e71" time="1381876649681" ignored="false" />
     <file path="/activity_listviewexampleactivity.xml" changelist="01480a30-0b14-483d-b6b5-4bb3192a9e71" time="1381872649896" ignored="false" />
@@ -69,12 +76,15 @@
     <file path="/MySimpleArrayAdapter.java" changelist="01480a30-0b14-483d-b6b5-4bb3192a9e71" time="1382113158183" ignored="false" />
     <file path="$PROJECT_DIR$/gen/com/example/AndroidTest/Manifest.java" changelist="01480a30-0b14-483d-b6b5-4bb3192a9e71" time="1381924394224" ignored="false" />
     <file path="/UrlEntry.java" changelist="01480a30-0b14-483d-b6b5-4bb3192a9e71" time="1381924865089" ignored="false" />
-    <file path="/MainActivity.java" changelist="01480a30-0b14-483d-b6b5-4bb3192a9e71" time="1382133633096" ignored="false" />
+    <file path="/MainActivity.java" changelist="01480a30-0b14-483d-b6b5-4bb3192a9e71" time="1384698831854" ignored="false" />
     <file path="/rowlayout.xml" changelist="01480a30-0b14-483d-b6b5-4bb3192a9e71" time="1382107632428" ignored="false" />
     <file path="/list_header.xml" changelist="01480a30-0b14-483d-b6b5-4bb3192a9e71" time="1382115455207" ignored="false" />
     <file path="/SeparatedListAdapter.java" changelist="01480a30-0b14-483d-b6b5-4bb3192a9e71" time="1382119813337" ignored="false" />
-    <file path="/MyExpandableListAdapter.java" changelist="01480a30-0b14-483d-b6b5-4bb3192a9e71" time="1382441908100" ignored="false" />
-    <file path="/list_item.xml" changelist="01480a30-0b14-483d-b6b5-4bb3192a9e71" time="1382440671823" ignored="false" />
+    <file path="/MyExpandableListAdapter.java" changelist="01480a30-0b14-483d-b6b5-4bb3192a9e71" time="1384704129147" ignored="false" />
+    <file path="/list_item.xml" changelist="01480a30-0b14-483d-b6b5-4bb3192a9e71" time="1384702678363" ignored="false" />
+    <file path="/ThreeLevelListActivity.java" changelist="01480a30-0b14-483d-b6b5-4bb3192a9e71" time="1384704081850" ignored="false" />
+    <file path="/StaticData.java" changelist="01480a30-0b14-483d-b6b5-4bb3192a9e71" time="1384703974419" ignored="false" />
+    <file path="/list_group.xml" changelist="01480a30-0b14-483d-b6b5-4bb3192a9e71" time="1384702661301" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,53 +150,43 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="MyExpandableListAdapter.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/example/AndroidTest/MyExpandableListAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="113" column="1" selection-start="3506" selection-end="3506" vertical-scroll-proportion="0.8954704">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Model.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/example/AndroidTest/Model.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="13" selection-start="102" selection-end="102" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="main.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
           <provider editor-type-id="android-designer">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="4" selection-start="713" selection-end="713" vertical-scroll-proportion="-9.6">
+            <state line="29" column="40" selection-start="1163" selection-end="1163" vertical-scroll-proportion="-17.4">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/example/AndroidTest/MainActivity.java">
+      <file leaf-file-name="ThreeLevelListActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/example/AndroidTest/ThreeLevelListActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="46" selection-start="1258" selection-end="1258" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_listviewexampleactivity.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/activity_listviewexampleactivity.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MyExpandableListAdapter.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/example/AndroidTest/MyExpandableListAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="71" selection-start="1783" selection-end="1783" vertical-scroll-proportion="0.40885416">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="strings.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="32" selection-start="83" selection-end="83" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="161" column="80" selection-start="4804" selection-end="4804" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -197,8 +197,49 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="86" selection-start="940" selection-end="940" vertical-scroll-proportion="-13.2">
+            <state line="16" column="36" selection-start="659" selection-end="659" vertical-scroll-proportion="-9.6">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="list_group.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout/list_group.xml">
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="41" selection-start="394" selection-end="394" vertical-scroll-proportion="-6.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="57" selection-start="477" selection-end="477" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/example/AndroidTest/MainActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="31" column="13" selection-start="599" selection-end="599" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StaticData.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/example/AndroidTest/StaticData.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="30" column="43" selection-start="1523" selection-end="1523" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -213,30 +254,30 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/src/com/example/AndroidTest/FakeUrlLoader.java" />
-        <option value="$PROJECT_DIR$/src/com/example/AndroidTest/Topic.java" />
         <option value="$PROJECT_DIR$/src/com/example/AndroidTest/UrlEntry.java" />
         <option value="$PROJECT_DIR$/src/com/example/AndroidTest/UrlSet.java" />
         <option value="$PROJECT_DIR$/src/com/example/AndroidTest/ReadWebpageAsyncTask.java" />
         <option value="$PROJECT_DIR$/res/layout/rowlayout.xml" />
         <option value="$PROJECT_DIR$/src/com/example/AndroidTest/MySimpleArrayAdapter.java" />
         <option value="$PROJECT_DIR$/res/layout/list_header.xml" />
-        <option value="$PROJECT_DIR$/res/layout/list_group.xml" />
         <option value="$PROJECT_DIR$/src/com/example/AndroidTest/SeparatedListAdapter.java" />
-        <option value="$PROJECT_DIR$/src/com/example/AndroidTest/MainActivity.java" />
-        <option value="$PROJECT_DIR$/res/layout/main.xml" />
-        <option value="$PROJECT_DIR$/res/layout/list_item.xml" />
         <option value="$PROJECT_DIR$/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/res/layout/main.xml" />
+        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/src/com/example/AndroidTest/MainActivity.java" />
+        <option value="$PROJECT_DIR$/res/layout/list_group.xml" />
+        <option value="$PROJECT_DIR$/res/layout/list_item.xml" />
+        <option value="$PROJECT_DIR$/src/com/example/AndroidTest/StaticData.java" />
+        <option value="$PROJECT_DIR$/src/com/example/AndroidTest/ThreeLevelListActivity.java" />
         <option value="$PROJECT_DIR$/src/com/example/AndroidTest/MyExpandableListAdapter.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-1" />
-    <option name="y" value="-24" />
-    <option name="width" value="1282" />
-    <option name="height" value="825" />
+    <option name="y" value="25" />
+    <option name="width" value="1922" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -301,6 +342,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -351,45 +393,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AndroidTest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AndroidTest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="values" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AndroidTest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AndroidTest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layout" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -408,7 +413,6 @@
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="192.168.56.101:5555" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="AVD_for_Nexus_S_by_Google" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
@@ -549,7 +553,7 @@
     </configuration>
     <configuration default="false" name="AndroidTest" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="AndroidTest" />
-      <option name="ACTIVITY_CLASS" value="com.example.AndroidTest.MainActivity" />
+      <option name="ACTIVITY_CLASS" value="com.example.AndroidTest.ThreeLevelListActivity" />
       <option name="MODE" value="specific_activity" />
       <option name="DEPLOY" value="true" />
       <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
@@ -586,34 +590,34 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="-24" width="1282" height="825" extended-state="0" />
+    <frame x="-1" y="25" width="1922" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="SBT Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39958376" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32785088" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4201313" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41995615" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21504803" sideWeight="0.57894737" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="JProfiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20745543" sideWeight="0.6387665" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36123347" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20757738" sideWeight="0.6721491" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35964912" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28228387" sideWeight="0.57894737" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3263889" sideWeight="0.57894737" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298647" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="SBT Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="JProfiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -717,16 +721,6 @@
         <state line="6" column="22" selection-start="166" selection-end="166" vertical-scroll-proportion="0.1494024" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/list_item.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="86" selection-start="940" selection-end="940" vertical-scroll-proportion="-13.2">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="32" selection-start="83" selection-end="83" vertical-scroll-proportion="0.0">
@@ -744,26 +738,78 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/AndroidTest/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="13" selection-start="599" selection-end="599" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/AndroidTest/Model.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="13" selection-start="102" selection-end="102" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="57" selection-start="477" selection-end="477" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="4" selection-start="713" selection-end="713" vertical-scroll-proportion="-9.6">
+        <state line="29" column="40" selection-start="1163" selection-end="1163" vertical-scroll-proportion="-17.4">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/AndroidTest/MainActivity.java">
+    <entry file="file://$PROJECT_DIR$/res/layout/list_group.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="46" selection-start="1258" selection-end="1258" vertical-scroll-proportion="0.0">
+        <state line="10" column="41" selection-start="394" selection-end="394" vertical-scroll-proportion="-6.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/list_item.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="36" selection-start="659" selection-end="659" vertical-scroll-proportion="-9.6">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/AndroidTest/StaticData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="43" selection-start="1523" selection-end="1523" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/AndroidTest/ThreeLevelListActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="161" column="80" selection-start="4804" selection-end="4804" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/AndroidTest/MyExpandableListAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="71" selection-start="1783" selection-end="1783" vertical-scroll-proportion="0.40885416">
+        <state line="113" column="1" selection-start="3506" selection-end="3506" vertical-scroll-proportion="0.8954704">
           <folding />
         </state>
       </provider>

@@ -35,25 +35,7 @@ public class MyExpandableListAdapter extends BaseExpandableListAdapter {
     }
 
     MyExpandableListAdapter(Context context) {
-        this(context, getData());
-    }
-
-    private static ArrayList<List<String>> getData() {
-        String[] names = new String[]{"group", "topic", "description", "url"};
-        ArrayList<List<String>> data = new ArrayList<List<String>>();
-        data.add(Arrays.asList("course", "course Topic 1", "bla bla", "www.example.com"));
-        data.add(Arrays.asList("course", "course Topic 1", "blub blub", "www.example.com"));
-        data.add(Arrays.asList("course", "course Topic 2", "Beispiel", "www.example.com"));
-        data.add(Arrays.asList("course", "course Topic 2", "Bleistift", "www.example.com"));
-        data.add(Arrays.asList("course", "course Topic 3", "foo", "www.example.com"));
-        data.add(Arrays.asList("course", "course Topic 3", "bar", "www.example.com"));
-        data.add(Arrays.asList("group", "group Topic 1", "foobar", "www.example.com"));
-        data.add(Arrays.asList("group", "group Topic 1", "baz", "www.example.com"));
-        data.add(Arrays.asList("group", "group Topic 2", "lolo", "www.example.com"));
-        data.add(Arrays.asList("group", "group Topic 2", "Pizza", "www.example.com"));
-        data.add(Arrays.asList("group", "group Topic 3", "Wurst", "www.example.com"));
-        data.add(Arrays.asList("group", "group Topic 3", "Brot", "www.example.com"));
-        return data;
+        this(context, StaticData.getData());
     }
 
     @Override
@@ -101,7 +83,7 @@ public class MyExpandableListAdapter extends BaseExpandableListAdapter {
 
         convertView.setBackgroundColor(categoryColors.get(groupPosition) + 0x101010);
 
-        TextView lblListHeader = (TextView) convertView.findViewById(R.id.lblListHeader);
+        TextView lblListHeader = (TextView) convertView.findViewById(R.id.header_text);
         lblListHeader.setTypeface(null, Typeface.BOLD);
         lblListHeader.setText(headerTitle);
 
@@ -117,8 +99,8 @@ public class MyExpandableListAdapter extends BaseExpandableListAdapter {
             convertView = inflater.inflate(R.layout.list_item, null);
         }
 
-        TextView txtListChild = (TextView) convertView.findViewById(R.id.lblListItem);
-        TextView bottomChild = (TextView) convertView.findViewById(R.id.bottom_list);
+        TextView txtListChild = (TextView) convertView.findViewById(R.id.top_text);
+        TextView bottomChild = (TextView) convertView.findViewById(R.id.bottom_text);
         convertView.setBackgroundColor(categoryColors.get(groupPosition));
         txtListChild.setText(entry.getName());
         bottomChild.setText(entry.getName());
@@ -128,58 +110,5 @@ public class MyExpandableListAdapter extends BaseExpandableListAdapter {
     @Override
     public boolean isChildSelectable(int groupPosition, int childPosition) {
         return true;
-    }
-}
-
-class SubListAdapter extends BaseExpandableListAdapter {
-
-    @Override
-    public int getGroupCount() {
-        return 0;  //To change body of implemented methods use File | Settings | File Templates.
-    }
-
-    @Override
-    public int getChildrenCount(int i) {
-        return 0;  //To change body of implemented methods use File | Settings | File Templates.
-    }
-
-    @Override
-    public Object getGroup(int i) {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
-    }
-
-    @Override
-    public Object getChild(int i, int i2) {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
-    }
-
-    @Override
-    public long getGroupId(int i) {
-        return 0;  //To change body of implemented methods use File | Settings | File Templates.
-    }
-
-    @Override
-    public long getChildId(int i, int i2) {
-        return 0;  //To change body of implemented methods use File | Settings | File Templates.
-    }
-
-    @Override
-    public boolean hasStableIds() {
-        return false;  //To change body of implemented methods use File | Settings | File Templates.
-    }
-
-    @Override
-    public View getGroupView(int i, boolean b, View view, ViewGroup viewGroup) {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
-    }
-
-    @Override
-    public View getChildView(int i, int i2, boolean b, View view, ViewGroup viewGroup) {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
-    }
-
-    @Override
-    public boolean isChildSelectable(int i, int i2) {
-        return false;  //To change body of implemented methods use File | Settings | File Templates.
     }
 }
