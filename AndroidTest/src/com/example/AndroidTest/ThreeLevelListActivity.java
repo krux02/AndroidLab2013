@@ -46,7 +46,7 @@ public class ThreeLevelListActivity extends Activity {
         @Override
         public View getChildView(int groupPos, int childPos, boolean isLastChild, View convertView, ViewGroup viewGroup) {
             CustExpListview SecondLevelexplv = new CustExpListview(ThreeLevelListActivity.this);
-            SecondLevelexplv.setAdapter(new SecondLevelAdapter());
+            SecondLevelexplv.setAdapter(new SecondLevelAdapter(groups.get(groupPos).topics.get(childPos)));
             SecondLevelexplv.setGroupIndicator(null);
             return SecondLevelexplv;
         }
@@ -106,6 +106,11 @@ public class ThreeLevelListActivity extends Activity {
     }
 
     public class SecondLevelAdapter extends BaseExpandableListAdapter {
+        StaticData.Topic topic;
+
+        public SecondLevelAdapter(StaticData.Topic topic) {
+            this.topic = topic;
+        }
 
         @Override
         public Object getChild(int groupPosition, int childPosition) {
@@ -125,14 +130,17 @@ public class ThreeLevelListActivity extends Activity {
 
             TextView top_text = (TextView)convertView.findViewById(R.id.top_text);
             TextView bottom_text = (TextView)convertView.findViewById(R.id.bottom_text);
-            top_text.setText("child");
-            bottom_text.setText("child");
+
+            StaticData.Link link = topic.links.get(childPosition);
+
+            top_text.setText(link.description);
+            bottom_text.setText(link.url);
             return convertView;
         }
 
         @Override
         public int getChildrenCount(int groupPosition) {
-            return 5;
+            return topic.links.size();
         }
 
 
@@ -160,7 +168,7 @@ public class ThreeLevelListActivity extends Activity {
             }
 
             TextView tv = (TextView) convertView.findViewById(R.id.header_text);
-            tv.setText("-->Second Level");
+            tv.setText(topic.name);
 
             return convertView;
         }

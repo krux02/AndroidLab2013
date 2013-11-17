@@ -31,7 +31,6 @@ public class MyExpandableListAdapter extends BaseExpandableListAdapter {
 
         Log.d(TAG, this.data.toString());
         for(UrlCategory ignored : this.data) categoryColors.add((r.nextInt() & 0x3f3f3f) | 0xff000000);
-
     }
 
     MyExpandableListAdapter(Context context) {

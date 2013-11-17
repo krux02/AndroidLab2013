@@ -82,7 +82,7 @@
     <file path="/SeparatedListAdapter.java" changelist="01480a30-0b14-483d-b6b5-4bb3192a9e71" time="1382119813337" ignored="false" />
     <file path="/MyExpandableListAdapter.java" changelist="01480a30-0b14-483d-b6b5-4bb3192a9e71" time="1384704129147" ignored="false" />
     <file path="/list_item.xml" changelist="01480a30-0b14-483d-b6b5-4bb3192a9e71" time="1384702678363" ignored="false" />
-    <file path="/ThreeLevelListActivity.java" changelist="01480a30-0b14-483d-b6b5-4bb3192a9e71" time="1384704081850" ignored="false" />
+    <file path="/ThreeLevelListActivity.java" changelist="01480a30-0b14-483d-b6b5-4bb3192a9e71" time="1384713565686" ignored="false" />
     <file path="/StaticData.java" changelist="01480a30-0b14-483d-b6b5-4bb3192a9e71" time="1384703974419" ignored="false" />
     <file path="/list_group.xml" changelist="01480a30-0b14-483d-b6b5-4bb3192a9e71" time="1384702661301" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -150,15 +150,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MyExpandableListAdapter.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/example/AndroidTest/MyExpandableListAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="113" column="1" selection-start="3506" selection-end="3506" vertical-scroll-proportion="0.8954704">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Model.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/example/AndroidTest/Model.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -174,19 +165,55 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="40" selection-start="1163" selection-end="1163" vertical-scroll-proportion="-17.4">
+            <state line="23" column="14" selection-start="952" selection-end="952" vertical-scroll-proportion="-13.8">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ThreeLevelListActivity.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="ThreeLevelListActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/example/AndroidTest/ThreeLevelListActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="161" column="80" selection-start="4804" selection-end="4804" vertical-scroll-proportion="0.0">
+            <state line="152" column="17" selection-start="4542" selection-end="4542" vertical-scroll-proportion="0.005376344">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UrlTopic.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/example/AndroidTest/UrlTopic.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="13" selection-start="175" selection-end="175" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UrlEntry.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/example/AndroidTest/UrlEntry.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="13" selection-start="98" selection-end="98" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UrlCategory.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/example/AndroidTest/UrlCategory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="41" column="1" selection-start="820" selection-end="820" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UrlBuilder.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/example/AndroidTest/UrlBuilder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="24" selection-start="228" selection-end="239" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -215,28 +242,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="57" selection-start="477" selection-end="477" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/example/AndroidTest/MainActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="13" selection-start="599" selection-end="599" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="StaticData.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/example/AndroidTest/StaticData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="43" selection-start="1523" selection-end="1523" vertical-scroll-proportion="0.0">
+            <state line="55" column="34" selection-start="2560" selection-end="2560" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -262,14 +271,14 @@
         <option value="$PROJECT_DIR$/res/layout/list_header.xml" />
         <option value="$PROJECT_DIR$/src/com/example/AndroidTest/SeparatedListAdapter.java" />
         <option value="$PROJECT_DIR$/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/res/layout/main.xml" />
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/src/com/example/AndroidTest/MainActivity.java" />
         <option value="$PROJECT_DIR$/res/layout/list_group.xml" />
         <option value="$PROJECT_DIR$/res/layout/list_item.xml" />
-        <option value="$PROJECT_DIR$/src/com/example/AndroidTest/StaticData.java" />
-        <option value="$PROJECT_DIR$/src/com/example/AndroidTest/ThreeLevelListActivity.java" />
         <option value="$PROJECT_DIR$/src/com/example/AndroidTest/MyExpandableListAdapter.java" />
+        <option value="$PROJECT_DIR$/src/com/example/AndroidTest/ThreeLevelListActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/example/AndroidTest/StaticData.java" />
+        <option value="$PROJECT_DIR$/res/layout/main.xml" />
       </list>
     </option>
   </component>
@@ -591,7 +600,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="25" width="1922" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -607,7 +616,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21504803" sideWeight="0.57894737" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20757738" sideWeight="0.6721491" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20757738" sideWeight="0.6403509" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35964912" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28228387" sideWeight="0.57894737" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -686,36 +695,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="47" selection-start="481" selection-end="481" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="47" selection-start="423" selection-end="423" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/local/dev/android-sdk-linux/platforms/android-18/android.jar!/android/widget/Filterable.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="17" selection-start="161" selection-end="161" vertical-scroll-proportion="0.15592515" />
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/local/dev/android-sdk-linux/platforms/android-18/android.jar!/android/widget/ArrayAdapter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="94" selection-start="236" selection-end="246" vertical-scroll-proportion="0.1494024" />
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/local/dev/android-sdk-linux/platforms/android-18/android.jar!/android/widget/BaseAdapter.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="22" selection-start="166" selection-end="166" vertical-scroll-proportion="0.1494024" />
@@ -745,26 +724,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/AndroidTest/Model.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="13" selection-start="102" selection-end="102" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="57" selection-start="477" selection-end="477" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="40" selection-start="1163" selection-end="1163" vertical-scroll-proportion="-17.4">
           <folding />
         </state>
       </provider>
@@ -789,28 +751,73 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/AndroidTest/MyExpandableListAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="59" selection-start="937" selection-end="951" vertical-scroll-proportion="0.5347092">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/AndroidTest/UrlTopic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="13" selection-start="175" selection-end="175" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/AndroidTest/UrlEntry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="13" selection-start="98" selection-end="98" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/AndroidTest/StaticData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="43" selection-start="1523" selection-end="1523" vertical-scroll-proportion="0.0">
+        <state line="55" column="34" selection-start="2560" selection-end="2560" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/AndroidTest/UrlBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="24" selection-start="228" selection-end="239" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/AndroidTest/UrlCategory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="1" selection-start="820" selection-end="820" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/AndroidTest/Model.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="13" selection-start="102" selection-end="102" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="14" selection-start="952" selection-end="952" vertical-scroll-proportion="-13.8">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/AndroidTest/ThreeLevelListActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="161" column="80" selection-start="4804" selection-end="4804" vertical-scroll-proportion="0.0">
+        <state line="152" column="17" selection-start="4542" selection-end="4542" vertical-scroll-proportion="0.005376344">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/AndroidTest/MyExpandableListAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="113" column="1" selection-start="3506" selection-end="3506" vertical-scroll-proportion="0.8954704">
-          <folding />
         </state>
       </provider>
     </entry>

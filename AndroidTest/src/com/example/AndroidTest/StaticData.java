@@ -31,29 +31,29 @@ public class StaticData {
     public static List<Group> getGroups() {
         return Arrays.asList(
             new Group("course",
-                new Topic("course Topic 1",
+                new Topic("course topic 1",
                     new Link("bla bla", "www.example.com"),
                     new Link("blub blub", "www.example.com")
                 ),
-                new Topic("course Topic 2",
+                new Topic("course topic 2",
                     new Link("Beispiel", "www.example.com"),
                     new Link("Bleistift", "www.example.com")
                 ),
-                new Topic("course Topic 3",
+                new Topic("course topic 3",
                     new Link("foo", "www.example.com"),
                     new Link("bar", "www.example.com")
                 )
             ),
             new Group("group",
-                new Topic("group Topic 1",
+                new Topic("group topic 1",
                     new Link("foobar", "www.example.com"),
                     new Link("baz", "www.example.com")
                 ),
-                new Topic("group Topic 2",
+                new Topic("group topic 2",
                     new Link("lolo", "www.example.com"),
                     new Link("Pizza", "www.example.com")
                 ),
-                new Topic("group Topic 3",
+                new Topic("group topic 3",
                     new Link("Wurst", "www.example.com"),
                     new Link("Brot", "www.example.com")
                 )

@@ -7,7 +7,6 @@
                 tools:context=".MainActivity"
                 android:id="@+id/main">
 
-    <!--
     <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -22,7 +21,7 @@
             android:id="@+id/list_left"
             android:layout_weight="4"
             android:background="#3f1f1f"
-            /> -->
+            />
     <ExpandableListView
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
