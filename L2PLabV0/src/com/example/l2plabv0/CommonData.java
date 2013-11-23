@@ -23,7 +23,7 @@ public class CommonData {
 	public static TypeOfHttpOperation currentOperation = TypeOfHttpOperation.OAUTH_NONE;
 
 	public static String GetOAuthLoginUrl() {
-		String url = "http://10.0.2.2/oAuth_poll.php";
+		String url = "http://seoul.freehostia.com/oAuth_poll.php";
 		// "https://service.campus.rwth-aachen.de/oauth2/oauth2.svc/code";
 		return url;
 	}
@@ -51,7 +51,7 @@ public class CommonData {
 	public static String getSingleValueFromKey(String key, Context context) {
 		SharedPreferences settings = PreferenceManager
 				.getDefaultSharedPreferences(context);
-		long systemTime = (long) (System.currentTimeMillis() / 1000L);
+		long systemTime = (System.currentTimeMillis() / 1000L);
 		long sharedprefTime = settings.getLong("EXPIRES_IN", -1);
 		if (sharedprefTime < systemTime) {
 			SharedPreferences.Editor editor = settings.edit();
