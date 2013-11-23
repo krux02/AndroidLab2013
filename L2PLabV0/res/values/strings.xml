@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">L2P Lab V0</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="APPLICATION_SECRET_KEY">EdtXGQg4npM5FJtG3eEQd0ofTEOTGdDuN9AehN2LcrUJndiBRRbH7e4JGSFXZXfR.apps.rwth-aachen.de</string>
+    <string name="APP_HOMEPAGE">http://code.google.com/p/l2p-hello-bookmark/</string>
+    <string name="SPLASH_SCREEN_LOGO_DESCRIPTION">L2P Bookmarks: Learn together</string>
+
+</resources>
