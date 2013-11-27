@@ -28,7 +28,7 @@ public class ProgressSandbox extends Activity {
 		textView = (TextView) findViewById(R.id.TextView01);
 		textView.setText("Checking...");
 		textView.setVisibility(View.VISIBLE);
-		
+
 		oAuthManageButton = (Button) findViewById(R.id.openOAuthManageUrl);
 		oAuthManageButton.setVisibility(View.INVISIBLE);
 		oAuthManageButton.setOnClickListener(new View.OnClickListener() {
@@ -39,8 +39,8 @@ public class ProgressSandbox extends Activity {
 				Intent intent = new Intent(Intent.ACTION_VIEW, uri);
 				startActivity(intent);
 			}
-		});		
-		
+		});
+
 		progressBar = (ProgressBar) findViewById(R.id.progressBar1);
 
 		CommonData.currentOperation = TypeOfHttpOperation.OAUTH_NONE;
@@ -52,12 +52,11 @@ public class ProgressSandbox extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		//CommonData.deleteAllSharedPreferences(ProgressSandbox.this);
-		CommonData.printAllSharedPreference(ProgressSandbox.this);
+		// CommonData.deleteAllSharedPreferences(ProgressSandbox.this);
+		 CommonData.printAllSharedPreference(ProgressSandbox.this);
 
 		CommonData.writeLog("onCreate", "This block was called");
 	}
-	
 
 	// AsyncTask <TypeOfVarArgParams , ProgressValue , ResultValue> .
 	private class DownloadWebPageTask extends AsyncTask<String, String, String> {
@@ -116,10 +115,13 @@ public class ProgressSandbox extends Activity {
 						httpOperationShouldContinue = false;
 						break;
 					case OAUTH_POLL:
-						oAuthUrl = CommonData.GetOAuthLoginUrl();
-						oAuthParam = "scope=l2p.rwth&client_id="
+						oAuthUrl = CommonData.GetOAuthPollUrl();
+						oAuthParam = "grant_type=device&client_id="
 								+ ProgressSandbox.this
-										.getString(R.string.APPLICATION_SECRET_KEY);
+										.getString(R.string.APPLICATION_SECRET_KEY)
+								+ "&code="
+								+ CommonData.getSingleValueFromKey(
+										"DEVICE_CODE", ProgressSandbox.this);
 						response = CommonData.POST(oAuthUrl, oAuthParam);
 
 						CommonData.saveAllCodesIntoSharedPreference(response,
@@ -144,7 +146,8 @@ public class ProgressSandbox extends Activity {
 					// Log.e(ex.getClass().getName(), ex.getMessage());
 					failureToastNecessary = true;
 					response = ex.getMessage();
-					CommonData.writeLog("OAUTH of "+CommonData.currentOperation.toString(), ex);
+					CommonData.writeLog("OAUTH of "
+							+ CommonData.currentOperation.toString(), ex);
 					httpOperationShouldContinue = false;
 				}
 			}
@@ -192,6 +195,7 @@ public class ProgressSandbox extends Activity {
 					+ CommonData.getSingleValueFromKey("ACCESS_TOKEN",
 							ProgressSandbox.this));
 			progressBar.setVisibility(View.GONE);
+			CommonData.deleteSingleSharedPreference("DEVICE_CODE", ProgressSandbox.this);
 			return;
 		} else if (deviceCode.length() > 0) {
 			CommonData.currentOperation = TypeOfHttpOperation.OAUTH_POLL;

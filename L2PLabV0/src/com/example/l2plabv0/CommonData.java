@@ -23,18 +23,18 @@ public class CommonData {
 	public static TypeOfHttpOperation currentOperation = TypeOfHttpOperation.OAUTH_NONE;
 
 	public static String GetOAuthLoginUrl() {
-		String url = "http://seoul.freehostia.com/oAuth_poll.php";
-		// "https://service.campus.rwth-aachen.de/oauth2/oauth2.svc/code";
+		//String url = "http://seoul.freehostia.com/oAuth_poll.php";
+		String url = "https://oauth.campus.rwth-aachen.de/oauth2waitress/oauth2.svc/code";
 		return url;
 	}
 
 	public static String GetManageDeviceCodeUrl() {
-		String url = "https://service.campus.rwth-aachen.de/oauth2/oauth2.svc/manage?verfiy=";
+		String url = "https://oauth.campus.rwth-aachen.de/manage/?q=verify&d=";
 		return url;
 	}
 
 	public static String GetOAuthPollUrl() {
-		String url = "https://service.campus.rwth-aachen.de/oauth2/oauth2.svc/token";
+		String url = "https://oauth.campus.rwth-aachen.de/oauth2waitress/oauth2.svc/token";
 		return url;
 	}
 
@@ -108,6 +108,14 @@ public class CommonData {
 
 	}
 
+	public static void deleteSingleSharedPreference(String key, Context context) {
+		SharedPreferences settings = PreferenceManager
+				.getDefaultSharedPreferences(context);
+		SharedPreferences.Editor editor = settings.edit();
+		
+		editor.putString(key, "").commit();
+	}
+	
 	public static void deleteAllSharedPreferences(Context context) {
 		SharedPreferences settings = PreferenceManager
 				.getDefaultSharedPreferences(context);
