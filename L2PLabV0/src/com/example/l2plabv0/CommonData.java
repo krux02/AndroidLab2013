@@ -73,7 +73,7 @@ public class CommonData {
 	}
 
 	public static void saveAllCodesIntoSharedPreference(String json,
-			Context context) {
+			Context context) throws Exception {
 		try {
 			SharedPreferences settings = PreferenceManager
 					.getDefaultSharedPreferences(context);
@@ -81,6 +81,12 @@ public class CommonData {
 			JSONObject jsonObject = new JSONObject(json);
 
 			String status = jsonObject.getString("status");
+			if(status.equalsIgnoreCase("error: device code invalid.")){
+				CommonData.deleteSingleSharedPreference("DEVICE_CODE", context);
+				Exception e = new Exception("Deleted invalid device code");
+				CommonData.writeLog("410", e);
+				throw e;
+			}
 			if (status.equalsIgnoreCase("ok") == false) {
 				CommonData.writeLog("onGlobalVariables Error CALL",
 						jsonObject.getString("status"));
@@ -103,7 +109,8 @@ public class CommonData {
 			}
 			editor.commit();
 		} catch (Exception e) {
-			CommonData.writeLog("JSON result", e);
+			//CommonData.writeLog("JSON result", e);
+			throw e;
 		}
 
 	}
