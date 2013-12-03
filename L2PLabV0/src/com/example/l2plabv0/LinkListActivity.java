@@ -7,10 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseExpandableListAdapter;
-import android.widget.ExpandableListView;
-import android.widget.ImageButton;
-import android.widget.TextView;
+import android.widget.*;
 
 import java.security.acl.Group;
 import java.util.List;
@@ -29,13 +26,31 @@ public class LinkListActivity extends Activity {
 
         setContentView(R.layout.activity_threelevellisthead);
         parent_list = (ExpandableListView) findViewById(R.id.parent_list);
-        parent_list.setAdapter(new ParentListAdapter(StaticData.getGroup()));
+        ParentListAdapter adapter = new ParentListAdapter(StaticData.getGroup());
+        parent_list.setAdapter(adapter);
+        parent_list.setOnChildClickListener(adapter);
+        Log.d(TAG,"Create");
     }
 
-    class ParentListAdapter extends BaseExpandableListAdapter {
+    class ParentListAdapter extends BaseExpandableListAdapter implements ExpandableListView.OnChildClickListener {
         List<StaticData.Course> courses;
 
-        public ParentListAdapter(List<StaticData.Course> courses) {
+        @Override
+        public boolean onChildClick(ExpandableListView expandableListView, View view, int course, int link_id, long l) {
+            Log.d(TAG,"onChildClick");
+            ImageButton favorite = (ImageButton)view.findViewById(R.id.favorite);
+            StaticData.Link link = courses.get(course).topics.get(link_id);
+            if (link.isBookmarked) {
+                favorite.setImageResource(android.R.drawable.btn_star_big_off);
+                link.isBookmarked = false;
+            } else {
+                favorite.setImageResource(android.R.drawable.btn_star_big_on);
+                link.isBookmarked = true;
+            }
+            return true;
+        }
+
+        public ParentListAdapter(List <StaticData.Course> courses) {
             this.courses = courses;
         }
 
@@ -54,13 +69,6 @@ public class LinkListActivity extends Activity {
             return 3;
         }
 
-        View.OnClickListener listener = new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Log.d(TAG,"onClick");
-            }
-        };
-
         @Override
         public View getChildView(int groupPosition, int childPosition, boolean isLastChild, View convertView, ViewGroup parent) {
             if( convertView == null ) {
@@ -71,7 +79,7 @@ public class LinkListActivity extends Activity {
             TextView bottom_text = (TextView)convertView.findViewById(R.id.bottom_text);
             ImageButton imageButton = (ImageButton)convertView.findViewById(R.id.favorite);
 
-            imageButton.setOnClickListener(listener);
+
 
             StaticData.Link link = courses.get(groupPosition).topics.get(childPosition);
             top_text.setText(link.description);
@@ -116,5 +124,7 @@ public class LinkListActivity extends Activity {
         public boolean isChildSelectable(int i, int i2) {
             return true;
         }
+
+
     }
 }

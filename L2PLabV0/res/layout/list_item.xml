@@ -8,11 +8,9 @@
     <ImageButton android:id="@+id/favorite"
                  android:layout_width="wrap_content"
                  android:layout_height="fill_parent"
-                 android:src="@android:drawable/btn_star"
+                 android:src="@android:drawable/star_big_off"
                  android:background="#00ffffff"
-                 android:onClick="toggleStarButton"
                  android:layout_centerVertical="true"
-                 android:layout_alignLeft=""
             />
 
     <LinearLayout android:orientation="vertical"
@@ -35,7 +33,7 @@
             android:layout_height="wrap_content"
             android:textSize="12dip"
             android:paddingTop="5dp"
-            android:paddingBottom="5dp"
+            android:paddingBottom="0dp"
             android:paddingLeft="?android:attr/expandableListPreferredChildPaddingLeft"
             android:text="www.example.com"/>
     </LinearLayout>
