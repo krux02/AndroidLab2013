@@ -39,7 +39,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ThreeLevelListActivity" android:label="@string/app_name">
+            android:name=".LinkListActivity" android:label="@string/app_name">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>

@@ -1,25 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
-              android:layout_height="55dip"
-              android:orientation="vertical" >
+              android:layout_height="wrap_content">
 
-    <TextView
-            android:id="@+id/top_text"
+
+
+    <ImageButton android:id="@+id/favorite"
+                 android:layout_width="wrap_content"
+                 android:layout_height="fill_parent"
+                 android:src="@android:drawable/btn_star"
+                 android:background="#00ffffff"
+                 android:onClick="toggleStarButton"
+                 android:layout_centerVertical="true"
+                 android:layout_alignLeft=""
+            />
+
+    <LinearLayout android:orientation="vertical"
+                  android:layout_width="match_parent"
+                  android:layout_height="55dip">
+
+        <TextView
+                android:id="@+id/top_text"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="17dip"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingLeft="?android:attr/expandableListPreferredChildPaddingLeft"
+                android:text="example"/>
+
+        <TextView
+            android:id="@+id/bottom_text"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:textSize="17dip"
+            android:textSize="12dip"
             android:paddingTop="5dp"
             android:paddingBottom="5dp"
-            android:paddingLeft="?android:attr/expandableListPreferredChildPaddingLeft" />
+            android:paddingLeft="?android:attr/expandableListPreferredChildPaddingLeft"
+            android:text="www.example.com"/>
+    </LinearLayout>
 
-    <TextView
-        android:id="@+id/bottom_text"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textSize="12dip"
-        android:paddingTop="5dp"
-        android:paddingBottom="5dp"
-        android:paddingLeft="?android:attr/expandableListPreferredChildPaddingLeft" />
 
-</LinearLayout>
+</RelativeLayout>

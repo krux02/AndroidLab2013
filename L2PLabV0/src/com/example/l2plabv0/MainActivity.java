@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
 import android.view.Menu;
+import android.view.View;
+import android.widget.ImageButton;
 
 public class MainActivity extends Activity {
 
@@ -30,5 +32,10 @@ public class MainActivity extends Activity {
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;// super.onCreateOptionsMenu(menu);
 	}
+
+    void toggleStarButton(View view) {
+        ImageButton imageButton = (ImageButton) view;
+        System.out.println(imageButton);
+    }
 
 }
