@@ -146,7 +146,7 @@ public class ProgressSandbox extends Activity {
 					// Log.e(ex.getClass().getName(), ex.getMessage());
 					failureToastNecessary = true;
 					response = ex.getMessage();
-					CommonData.writeLog("OAUTH of "
+					CommonData.writeLog("Error during: "
 							+ CommonData.currentOperation.toString(), ex);
 					httpOperationShouldContinue = false;
 				}
