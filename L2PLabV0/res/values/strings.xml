@@ -7,5 +7,6 @@
     <string name="APPLICATION_SECRET_KEY">EdtXGQg4npM5FJtG3eEQd0ofTEOTGdDuN9AehN2LcrUJndiBRRbH7e4JGSFXZXfR.apps.rwth-aachen.de</string>
     <string name="APP_HOMEPAGE">http://code.google.com/p/l2p-hello-bookmark/</string>
     <string name="SPLASH_SCREEN_LOGO_DESCRIPTION">L2P Bookmarks: Learn together</string>
+    <string name="favorite">favorite</string>
 
 </resources>
