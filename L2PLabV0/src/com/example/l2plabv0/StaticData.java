@@ -27,7 +27,7 @@ public class StaticData {
         return data;
     }
 
-    public static List<Course> getGroup() {
+    public static List<Course> getCourseList() {
         return Arrays.asList(
             new Course("languages for scientific computing",
                 new Link("Matlab", "http://en.wikipedia.org/wiki/MATLAB"),
@@ -56,7 +56,7 @@ public class StaticData {
 
         public Course(String name, Link... topics) {
             this.name = name;
-            this.topics = Arrays.asList(topics);
+            this.topics = new ArrayList<Link>(Arrays.asList(topics));
         }
     }
 

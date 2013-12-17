@@ -52,8 +52,8 @@ public class ProgressSandbox extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		// CommonData.deleteAllSharedPreferences(ProgressSandbox.this);
-		 CommonData.printAllSharedPreference(ProgressSandbox.this);
+		//CommonData.deleteAllSharedPreferences(ProgressSandbox.this);
+		CommonData.printAllSharedPreference(ProgressSandbox.this);
 
 		CommonData.writeLog("onCreate", "This block was called");
 	}
