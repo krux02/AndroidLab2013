@@ -58,41 +58,49 @@ public class LinkListActivity extends Activity {
 
 
         ExpandableListView.ExpandableListContextMenuInfo info = (ExpandableListView.ExpandableListContextMenuInfo)menuInfo;
-        final int group = ExpandableListView.getPackedPositionGroup(info.packedPosition);
+        final int courseId = ExpandableListView.getPackedPositionGroup(info.packedPosition);
+        final StaticData.Course course = courseList.get(courseId);
         switch (ExpandableListView.getPackedPositionType(info.packedPosition)) {
             case ExpandableListView.PACKED_POSITION_TYPE_CHILD:
                 Log.d(TAG,"child");
-                final int child = ExpandableListView.getPackedPositionChild(info.packedPosition);
+                final int linkId = ExpandableListView.getPackedPositionChild(info.packedPosition);
+                final StaticData.Link link = course.topics.get(linkId);
                 getMenuInflater().inflate(R.menu.link_menu, menu);
-                menu.setHeaderTitle(courseList.get(group).topics.get(child).description);
+                menu.setHeaderTitle(link.description);
                 MenuItem remove = menu.findItem(R.id.remove);
                 remove.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
                     @Override
                     public boolean onMenuItemClick(MenuItem menuItem) {
-                        courseList.get(group).topics.remove(child);
+                        course.topics.remove(linkId);
                         adapter.notifyDataSetChanged();
                         return true;
                     }
                 });
-                MenuItem rename = menu.findItem(R.id.rename);
+                MenuItem rename = menu.findItem(R.id.edit);
                 rename.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
                     @Override
                     public boolean onMenuItemClick(MenuItem menuItem) {
+                        Intent myIntent = new Intent(LinkListActivity.this, LinkFormActivity.class);
+                        myIntent.putExtra("courseId", courseId);
+                        myIntent.putExtra("courseName", course.name );
+                        myIntent.putExtra("linkId", linkId);
+                        myIntent.putExtra("link", link);
+                        startActivityForResult(myIntent, REQUEST_CODE_EDIT_LINK);
                         return true;
                     }
                 });
                 break;
             case ExpandableListView.PACKED_POSITION_TYPE_GROUP:
-                Log.d(TAG,"group");
+                Log.d(TAG,"courseId");
                 getMenuInflater().inflate(R.menu.group_menu, menu);
-                menu.setHeaderTitle(courseList.get(group).name);
+                menu.setHeaderTitle(course.name);
                 MenuItem add = menu.findItem(R.id.add);
                 add.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
                     @Override
                     public boolean onMenuItemClick(MenuItem menuItem) {
                         Intent myIntent = new Intent(LinkListActivity.this, LinkFormActivity.class);
-                        myIntent.putExtra("courseId",group);
-                        myIntent.putExtra("courseName", courseList.get(group).name);
+                        myIntent.putExtra("courseId",courseId);
+                        myIntent.putExtra("courseName", course.name);
                         startActivityForResult(myIntent, REQUEST_CODE_NEW_LINK);
                         return true;
                     }
@@ -116,6 +124,14 @@ public class LinkListActivity extends Activity {
                 Log.d(TAG, "link: " + data.hasExtra("link"));
                 Log.d(TAG, "courseId: " + data.hasExtra("courseId"));
             }
+        } else if (resultCode == RESULT_OK && requestCode == REQUEST_CODE_EDIT_LINK) {
+            StaticData.Link link = (StaticData.Link)data.getSerializableExtra("link");
+            int courseId = data.getIntExtra("courseId",-1);
+            int linkId = data.getIntExtra("linkId",-1);
+            StaticData.Course course = courseList.get(courseId);
+            course.topics.set(linkId,link);
+            Collections.sort(course.topics, mycomparator);
+            adapter.notifyDataSetChanged();
         } else if (resultCode == RESULT_CANCELED) {
             Log.d(TAG, "cancel new link intent");
         } else {

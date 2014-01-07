@@ -5,12 +5,23 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/description" />
+
     <EditText
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="@string/description"
         android:id="@+id/description"
-        android:inputType="text"/>
+        android:inputType="text"
+        />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="URL" />
 
     <EditText
         android:layout_width="fill_parent"
@@ -18,6 +29,10 @@
         android:text="@string/example_address"
         android:id="@+id/url"
         android:inputType="textUri"/>
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/name" />
 
     <EditText
         android:layout_width="fill_parent"

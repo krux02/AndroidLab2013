@@ -8,26 +8,6 @@ import java.util.*;
  * Time: 15:35
  */
 public class StaticData {
-    public static List<List<String>> getData() {
-        String[] names = new String[]{"group", "topic", "description", "url"};
-        ArrayList<List<String>> data = new ArrayList<List<String>>();
-
-        data.add(Arrays.asList("course", "course Topic 1", "bla bla", "www.example.co/*m"));
-        data.add(Arrays.asList("course", "course Topic 1", "blub blub", "www.example.com"));
-        data.add(Arrays.asList("course", "course Topic 2", "Beispiel", "www.example.com"));
-        data.add(Arrays.asList("course", "course Topic 2", "Bleistift", "www.example.com"));
-        data.add(Arrays.asList("course", "course Topic 3", "foo", "www.example.com"));
-        data.add(Arrays.asList("course", "course Topic 3", "bar", "www.example.com"));
-        data.add(Arrays.asList("group", "group Topic 1", "foobar", "www.example.com"));
-        data.add(Arrays.asList("group", "group Topic 1", "baz", "www.example.com"));
-        data.add(Arrays.asList("group", "group Topic 2", "lolo", "www.example.com"));
-        data.add(Arrays.asList("group", "group Topic 2", "Pizza", "www.example.com"));
-        data.add(Arrays.asList("group", "group Topic 3", "Wurst", "www.example.com"));
-        data.add(Arrays.asList("group", "group Topic 3", "Brot", "www.example.com"));
-
-        return data;
-    }
-
     public static List<Course> getCourseList() {
         return Arrays.asList(
             new Course("languages for scientific computing",

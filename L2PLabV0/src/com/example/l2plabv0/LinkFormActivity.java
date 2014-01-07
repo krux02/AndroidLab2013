@@ -23,7 +23,7 @@ public class LinkFormActivity extends Activity {
 
     EditText nameView, urlView, descriptionView;
     CheckBox bookmarked;
-
+    Intent resultIntent;
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Log.d(TAG, "Create");
@@ -33,11 +33,19 @@ public class LinkFormActivity extends Activity {
         urlView         = (EditText)findViewById(R.id.url);
         descriptionView = (EditText)findViewById(R.id.description);
         bookmarked      = (CheckBox)findViewById(R.id.bookmark);
+
+        resultIntent = getIntent();
+        if( resultIntent.hasExtra("link") ) {
+            StaticData.Link link = (StaticData.Link)resultIntent.getSerializableExtra("link");
+            nameView.setText(link.name);
+            urlView.setText(link.url);
+            descriptionView.setText(link.description);
+            bookmarked.setChecked(link.isBookmarked);
+        }
     }
 
     public void onOk(View view) {
         Log.d(TAG, "OK pressed");
-        Intent returnIntent = getIntent();
 
         StaticData.Link link = new StaticData.Link(
                 descriptionView.getText().toString(),
@@ -48,8 +56,8 @@ public class LinkFormActivity extends Activity {
                 Calendar.getInstance().getTime()
         );
 
-        returnIntent.putExtra("link", link);
-        setResult(RESULT_OK, returnIntent);
+        resultIntent.putExtra("link", link);
+        setResult(RESULT_OK, resultIntent);
         finish();
     }
 
