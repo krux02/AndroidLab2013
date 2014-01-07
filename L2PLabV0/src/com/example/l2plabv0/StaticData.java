@@ -1,4 +1,5 @@
 package com.example.l2plabv0;
+import java.io.Serializable;
 import java.util.*;
 
 /**
@@ -60,27 +61,27 @@ public class StaticData {
         }
     }
 
-    public static class Link{
+    public static class Link implements Serializable {
         public String description;
         public String url;
-        public String comment;
+        public String name;
         public Boolean isBookmarked;
         public String group; // can be empty
         public Date lastModified;
 
-        public Link(String description, String url, String comment, Boolean bookmarked, String group, Date lastModified) {
+        public Link(String description, String url, String name, Boolean bookmarked, String group, Date lastModified) {
             this.description = description;
             this.url = url;
-            this.comment = comment;
+            this.name = name;
             isBookmarked = bookmarked;
             this.group = group;
             this.lastModified = lastModified;
         }
 
-        public Link(String description, String url) {
-            this.description = description;
+        public Link(String name, String url) {
+            this.description = url;
             this.url = url;
-            this.comment = "";
+            this.name = name;
             isBookmarked = false;
             this.group = "";
             this.lastModified = new Date();
