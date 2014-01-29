@@ -30,8 +30,7 @@ public class StaticData {
 				listOfLinks.add(new Link(singleComment, singleUrl));
 			}
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			CommonData.writeLog("Static Data Download", e);	
 		}
     	courseAndLinks.add(
     			new Course("Newest L2P", listOfLinks));

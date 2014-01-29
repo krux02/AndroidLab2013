@@ -137,6 +137,9 @@ public class ProgressSandbox extends Activity {
 							this.publishProgress("Successfully got token.");
 							response = "Access token found: " + temp;
 							httpOperationShouldContinue = false;
+							
+							Intent i = new Intent(ProgressSandbox.this, LinkListActivity.class);
+				            startActivity(i);
 						}
 						break;
 					default:
@@ -196,6 +199,9 @@ public class ProgressSandbox extends Activity {
 							ProgressSandbox.this));
 			progressBar.setVisibility(View.GONE);
 			CommonData.deleteSingleSharedPreference("DEVICE_CODE", ProgressSandbox.this);
+			
+			Intent i = new Intent(ProgressSandbox.this, LinkListActivity.class);
+            startActivity(i);
 			return;
 		} else if (deviceCode.length() > 0) {
 			CommonData.currentOperation = TypeOfHttpOperation.OAUTH_POLL;

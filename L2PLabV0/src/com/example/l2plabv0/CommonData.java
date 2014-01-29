@@ -7,12 +7,6 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Map;
 
-import org.apache.http.HttpEntity;
-import org.apache.http.HttpResponse;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.util.EntityUtils;
 import org.json.JSONObject;
 
 import android.content.Context;
@@ -140,26 +134,6 @@ public class CommonData {
 					+ entry.getValue().toString());
 			settings.edit().remove(entry.getKey()).commit();
 		}
-	}
-
-	public static String GET(String givenUrl) throws Exception {
-		String jsonData = "";
-
-		try {
-			HttpClient client = new DefaultHttpClient();
-			HttpGet get = new HttpGet(givenUrl);
-			HttpResponse responseGet = client.execute(get);
-			HttpEntity resEntityGet = responseGet.getEntity();
-			if (resEntityGet != null) {
-				// do something with the response
-				jsonData = EntityUtils.toString(resEntityGet);
-				Log.i("GET RESPONSE", jsonData);
-			}
-		} catch (Exception e) {
-			throw e;
-		}
-
-		return jsonData;
 	}
 
 	public static String POST(String oAuthURL, String oAuthParam)

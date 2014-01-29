@@ -8,7 +8,6 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.util.EntityUtils;
 
 import android.os.AsyncTask;
-import android.util.Log;
 
 public class CommonHttpGETorPOST extends AsyncTask<String, String, String>{
 
@@ -23,14 +22,10 @@ public class CommonHttpGETorPOST extends AsyncTask<String, String, String>{
 			if (resEntityGet != null) {
 				// do something with the response
 				jsonData = EntityUtils.toString(resEntityGet);
-				Log.i("GET RESPONSE", jsonData);
 			}
         } catch (Exception e) {
             CommonData.writeLog("HTTP GET", e);
         }
         return jsonData;
-    }
-
-    protected void onPostExecute(String returnData) {
     }
 }
