@@ -7,6 +7,12 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Map;
 
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.util.EntityUtils;
 import org.json.JSONObject;
 
 import android.content.Context;
@@ -23,7 +29,7 @@ public class CommonData {
 	public static TypeOfHttpOperation currentOperation = TypeOfHttpOperation.OAUTH_NONE;
 
 	public static String GetOAuthLoginUrl() {
-		//String url = "http://seoul.freehostia.com/oAuth_poll.php";
+		// String url = "http://seoul.freehostia.com/oAuth_poll.php";
 		String url = "https://oauth.campus.rwth-aachen.de/oauth2waitress/oauth2.svc/code";
 		return url;
 	}
@@ -47,7 +53,7 @@ public class CommonData {
 		String base = "# ";
 		Log.e(base + subsection, e.getClass().getName() + ": " + e.getMessage());
 	}
-	
+
 	public static String getSingleValueFromKey(String key, Context context) {
 		SharedPreferences settings = PreferenceManager
 				.getDefaultSharedPreferences(context);
@@ -59,7 +65,6 @@ public class CommonData {
 		}
 		return settings.getString(key, "");
 	}
-
 
 	public static void printAllSharedPreference(Context context) {
 		SharedPreferences settings = PreferenceManager
@@ -81,7 +86,7 @@ public class CommonData {
 			JSONObject jsonObject = new JSONObject(json);
 
 			String status = jsonObject.getString("status");
-			if(status.equalsIgnoreCase("error: device code invalid.")){
+			if (status.equalsIgnoreCase("error: device code invalid.")) {
 				CommonData.deleteSingleSharedPreference("DEVICE_CODE", context);
 				Exception e = new Exception("Deleted invalid device code");
 				CommonData.writeLog("410", e);
@@ -109,7 +114,7 @@ public class CommonData {
 			}
 			editor.commit();
 		} catch (Exception e) {
-			//CommonData.writeLog("JSON result", e);
+			// CommonData.writeLog("JSON result", e);
 			throw e;
 		}
 
@@ -119,10 +124,10 @@ public class CommonData {
 		SharedPreferences settings = PreferenceManager
 				.getDefaultSharedPreferences(context);
 		SharedPreferences.Editor editor = settings.edit();
-		
+
 		editor.putString(key, "").commit();
 	}
-	
+
 	public static void deleteAllSharedPreferences(Context context) {
 		SharedPreferences settings = PreferenceManager
 				.getDefaultSharedPreferences(context);
@@ -135,6 +140,26 @@ public class CommonData {
 					+ entry.getValue().toString());
 			settings.edit().remove(entry.getKey()).commit();
 		}
+	}
+
+	public static String GET(String givenUrl) throws Exception {
+		String jsonData = "";
+
+		try {
+			HttpClient client = new DefaultHttpClient();
+			HttpGet get = new HttpGet(givenUrl);
+			HttpResponse responseGet = client.execute(get);
+			HttpEntity resEntityGet = responseGet.getEntity();
+			if (resEntityGet != null) {
+				// do something with the response
+				jsonData = EntityUtils.toString(resEntityGet);
+				Log.i("GET RESPONSE", jsonData);
+			}
+		} catch (Exception e) {
+			throw e;
+		}
+
+		return jsonData;
 	}
 
 	public static String POST(String oAuthURL, String oAuthParam)

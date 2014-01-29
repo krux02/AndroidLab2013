@@ -2,6 +2,9 @@ package com.example.l2plabv0;
 import java.io.Serializable;
 import java.util.*;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+
 /**
  * User: arne
  * Date: 17.11.13
@@ -9,6 +12,32 @@ import java.util.*;
  */
 public class StaticData {
     public static List<Course> getCourseList() {
+    	
+    	String url = "http://seoul.freehostia.com/file.json";
+    	List<Course> courseAndLinks = new ArrayList<Course>();
+    	List<Link> listOfLinks = new ArrayList<Link>();
+    	
+    	try {
+			String jsonFromServer = new CommonHttpGETorPOST().execute(url).get();
+			JSONObject jsonObjectFromServer = new JSONObject(jsonFromServer);
+			JSONArray dataSetArray = jsonObjectFromServer.getJSONArray("dataSet");
+			listOfLinks.clear();
+			for(int i=0;i<dataSetArray.length();++i){
+				JSONObject singleLinkItem = dataSetArray.getJSONObject(i);
+				String singleComment = singleLinkItem.getString("comment");
+				String singleUrl = singleLinkItem.getString("Url");
+				
+				listOfLinks.add(new Link(singleComment, singleUrl));
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    	courseAndLinks.add(
+    			new Course("Newest L2P", listOfLinks));
+    	
+    	return courseAndLinks;
+    	/*
         return Arrays.asList(
             new Course("languages for scientific computing",
                 new Link("Matlab", "http://en.wikipedia.org/wiki/MATLAB"),
@@ -29,15 +58,16 @@ public class StaticData {
                new Link("pedestrian detection", "http://en.wikipedia.org/wiki/Pedestrian_detection")
             )
         );
+        */
     }
 
     public static class Course{
         public String name;
         public List<Link> topics;
 
-        public Course(String name, Link... topics) {
+        public Course(String name, List<Link> listOfLinks) {
             this.name = name;
-            this.topics = new ArrayList<Link>(Arrays.asList(topics));
+            this.topics = listOfLinks;
         }
     }
 
