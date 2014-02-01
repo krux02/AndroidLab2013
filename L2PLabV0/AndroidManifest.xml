@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.l2plabv0"
     android:versionCode="2"
-    android:versionName="3.2.2.0" >
+    android:versionName="3.2.2.4" >
 
     <uses-sdk
         android:minSdkVersion="8"
@@ -29,6 +29,12 @@
             android:label="@string/app_name" >
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity 
+            android:name="com.example.l2plabv0.SelectCurrentSemesterCourse" android:label="@string/SelectCourse">
+            <intent-filter >
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
         <activity
