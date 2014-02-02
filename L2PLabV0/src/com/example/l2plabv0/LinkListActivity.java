@@ -2,16 +2,21 @@ package com.example.l2plabv0;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.v4.app.NavUtils;
+import android.support.v4.app.TaskStackBuilder;
 import android.util.Log;
 import android.view.ContextMenu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
 import android.widget.*;
 
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.concurrent.ExecutionException;
 
 /**
  * User: arne
@@ -25,6 +30,19 @@ public class LinkListActivity extends Activity {
     ExpandableListView parent_list;
     List<StaticData.Course> courseList;
     LinkListAdapter adapter;
+    
+    private class DownloadFilesTask extends AsyncTask<String, Void, String> {
+        protected String doInBackground(String... urls) {
+            return "13ws-2014-Custom";
+        }
+
+
+        protected void onPostExecute(String title) {
+        	Window w= getWindow();
+        	w.setTitle(title);
+        }
+    }
+
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,7 +55,42 @@ public class LinkListActivity extends Activity {
         parent_list.setAdapter(adapter);
         parent_list.setOnChildClickListener(adapter);
 
-        Log.d(TAG,"Create");
+        getActionBar().setDisplayHomeAsUpEnabled(true);
+        //Log.d(TAG,"Create");
+        
+        String semesterNameApi = "http://137.226.231.116/websites/ws2014/_vti_bin/L2PServices/API.svc/v1/viewCourseInfo?accessToken=asdlk&cid=13ws-55503";
+        new DownloadFilesTask().execute(semesterNameApi);
+
+        CommonData.writeLog("onCreate", "link list activity");
+    }
+    
+        
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+        // Respond to the action bar's Up/Home button
+        case android.R.id.home:
+        	Intent upIntent = NavUtils.getParentActivityIntent(this);
+            if (NavUtils.shouldUpRecreateTask(this, upIntent)) {
+                // This activity is NOT part of this app's task, so create a new task
+                // when navigating up, with a synthesized back stack.
+                TaskStackBuilder.create(this)
+                        // Add all of this activity's parents to the back stack
+                        .addNextIntentWithParentStack(upIntent)
+                        // Navigate up to the closest parent
+                        .startActivities();
+            } else {
+                // This activity is part of this app's task, so simply
+                // navigate up to the logical parent activity.
+                //NavUtils.navigateUpTo(this, upIntent);
+            	upIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            	startActivity(upIntent);
+            	finish();
+            }
+            return true;
+
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     final Comparator<StaticData.Link> mycomparator = new Comparator<StaticData.Link>() {

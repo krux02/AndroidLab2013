@@ -5,7 +5,7 @@
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
     <string name="APPLICATION_SECRET_KEY">EdtXGQg4npM5FJtG3eEQd0ofTEOTGdDuN9AehN2LcrUJndiBRRbH7e4JGSFXZXfR.apps.rwth-aachen.de</string>
-    <string name="APP_HOMEPAGE">http://code.google.com/p/l2p-hello-bookmark/</string>
+    <string name="APP_HOMEPAGE">https://github.com/krux02/AndroidLab2013</string>
     <string name="SPLASH_SCREEN_LOGO_DESCRIPTION">L2P Bookmarks: Learn together</string>
     <string name="favorite">favorite</string>
     <string name="notes">Notes</string>
@@ -14,6 +14,6 @@
     <string name="link_form_label">Edit Link</string>
     <string name="bookmark">bookmark</string>
     <string name="SelectSemester">Please select semester</string>
-    <string name="CURRENT_SEMESTER">Winter-2014 Semester</string>
+    <string name="CURRENT_SEMESTER">Semesters Enrolled</string>
 	<string name="CONTINUE">Continue;</string>
 </resources>

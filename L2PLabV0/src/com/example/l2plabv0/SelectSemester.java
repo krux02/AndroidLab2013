@@ -16,7 +16,7 @@ import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-public class SelectCurrentSemesterCourse extends Activity {
+public class SelectSemester extends Activity {
 
 	private Spinner spinner2;
 	private Button btnSubmit;
@@ -24,11 +24,13 @@ public class SelectCurrentSemesterCourse extends Activity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_select_course);
+		setContentView(R.layout.activity_select_semester);
 
 		addItemsOnSpinner2();
 		addListenerOnButton();
 		addListenerOnSpinnerItemSelection();
+		
+		CommonData.writeLog("oncreate", "semester selection");
 	}
 
 	// add items into spinner dynamically
@@ -38,7 +40,7 @@ public class SelectCurrentSemesterCourse extends Activity {
 		List<String> list = new ArrayList<String>();
 		/* Download and fillup courses */
 		try {
-			String url = "http://seoul.freehostia.com/course.json";
+			String url = "http://seoul.freehostia.com/semester.json";
 			String jsonFromServer = new CommonHttpGETorPOST().execute(url)
 					.get();
 			JSONObject jsonObjectFromServer = new JSONObject(jsonFromServer);
@@ -50,7 +52,7 @@ public class SelectCurrentSemesterCourse extends Activity {
 				String singleCourseName = singleLinkItem.getString("name");
 				list.add(singleCourseName);
 			}
-			list.add("sample course");
+			//list.add("<Not yet declared/>");
 			/* End */
 			ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this,
 					android.R.layout.simple_spinner_item, list);
@@ -80,11 +82,11 @@ public class SelectCurrentSemesterCourse extends Activity {
 			public void onClick(View v) {
 
 				Toast.makeText(
-						SelectCurrentSemesterCourse.this,
+						SelectSemester.this,
 						"OnClickListener : " + "\nSpinner 2 : "
 								+ String.valueOf(spinner2.getSelectedItem()),
 						Toast.LENGTH_SHORT).show();
-				 Intent i = new Intent(SelectCurrentSemesterCourse.this, LinkListActivity.class);
+				 Intent i = new Intent(SelectSemester.this, LinkListActivity.class);
 	                //Intent i = new Intent(SplashScreen.this, LinkListActivity.class);
 	             startActivity(i);
 	 
