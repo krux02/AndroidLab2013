@@ -8,12 +8,12 @@
     <string name="APP_HOMEPAGE">http://code.google.com/p/l2p-hello-bookmark/</string>
     <string name="SPLASH_SCREEN_LOGO_DESCRIPTION">L2P Bookmarks: Learn together</string>
     <string name="favorite">favorite</string>
-    <string name="description">description</string>
+    <string name="notes">Notes</string>
     <string name="example_address">www.example.com</string>
-    <string name="name">name</string>
+    <string name="name">Name</string>
     <string name="link_form_label">Edit Link</string>
     <string name="bookmark">bookmark</string>
-    <string name="SelectCourse">Please select a course</string>
+    <string name="SelectSemester">Please select semester</string>
     <string name="CURRENT_SEMESTER">Winter-2014 Semester</string>
 	<string name="CONTINUE">Continue;</string>
 </resources>

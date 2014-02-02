@@ -32,7 +32,7 @@
             </intent-filter>
         </activity>
         <activity 
-            android:name="com.example.l2plabv0.SelectCurrentSemesterCourse" android:label="@string/SelectCourse">
+            android:name="com.example.l2plabv0.SelectCurrentSemesterCourse" android:label="@string/SelectSemester">
             <intent-filter >
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>

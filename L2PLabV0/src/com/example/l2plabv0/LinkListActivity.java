@@ -66,7 +66,7 @@ public class LinkListActivity extends Activity {
                 final int linkId = ExpandableListView.getPackedPositionChild(info.packedPosition);
                 final StaticData.Link link = course.topics.get(linkId);
                 getMenuInflater().inflate(R.menu.link_menu, menu);
-                menu.setHeaderTitle(link.description);
+                menu.setHeaderTitle(link.name);
                 MenuItem remove = menu.findItem(R.id.remove);
                 remove.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
                     @Override
@@ -105,6 +105,7 @@ public class LinkListActivity extends Activity {
                         return true;
                     }
                 });
+
                 break;
         }
     }
