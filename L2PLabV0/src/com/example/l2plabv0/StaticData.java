@@ -16,7 +16,7 @@ public class StaticData {
 
 		String url = "http://seoul.freehostia.com/file.json";
 		List<Course> courseAndLinks = new ArrayList<Course>();
-		List<Link> listOfLinks = new ArrayList<Link>();
+
 
 		try {
 			String jsonFromServer = new CommonHttpGETorPOST().execute(url)
@@ -25,7 +25,7 @@ public class StaticData {
 			JSONArray dataSetArray = jsonObjectFromServer
 					.getJSONArray("dataSet");
 			for (Integer c = 0; c < 3; ++c) {
-				listOfLinks.clear();
+                List<Link> listOfLinks = new ArrayList<Link>();
 				for (int i = 0; i < dataSetArray.length(); ++i) {
 					JSONObject singleLinkItem = dataSetArray.getJSONObject(i);
 					String singleComment = singleLinkItem.getString("comment");
@@ -77,7 +77,15 @@ public class StaticData {
 			this.name = name;
 			this.topics = listOfLinks;
 		}
-	}
+
+        @Override
+        public String toString() {
+            return "Course{" +
+                    "name='" + name + '\'' +
+                    ", topics=" + topics +
+                    '}';
+        }
+    }
 
 	public static class Link implements Serializable {
 		public String description;
@@ -105,5 +113,14 @@ public class StaticData {
 			this.group = "";
 			this.lastModified = new Date();
 		}
-	}
+
+        @Override
+        public String toString() {
+            return "Link{" +
+                    "description='" + description + '\'' +
+                    ", url='" + url + '\'' +
+                    ", name='" + name + '\'' +
+                    '}';
+        }
+    }
 }
