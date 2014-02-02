@@ -14,12 +14,13 @@ import org.json.JSONObject;
 public class StaticData {
 	public static List<Course> getCourseList() {
 
-		String url = "http://seoul.freehostia.com/file.json";
+		String cid= "13ws-55503";
+		String url = "http://137.226.231.116/websites/ws2014/_vti_bin/L2PServices/API.svc/v1/viewAllHyperlink?accessToken=asdlk&cid="+cid;
 		List<Course> courseAndLinks = new ArrayList<Course>();
 		List<Link> listOfLinks = new ArrayList<Link>();
 
 		try {
-			String jsonFromServer = new CommonHttpGETorPOST().execute(url)
+			String jsonFromServer = new NTLMAuthenticationGETorPOST().execute(url)
 					.get();
 			JSONObject jsonObjectFromServer = new JSONObject(jsonFromServer);
 			JSONArray dataSetArray = jsonObjectFromServer
@@ -28,12 +29,13 @@ public class StaticData {
 				listOfLinks.clear();
 				for (int i = 0; i < dataSetArray.length(); ++i) {
 					JSONObject singleLinkItem = dataSetArray.getJSONObject(i);
-					String singleComment = singleLinkItem.getString("comment");
-					String singleUrl = singleLinkItem.getString("Url");
+					String singleComment = singleLinkItem.getString("notes");
+					String singleUrl = singleLinkItem.getString("url");
+					String singleDescription= singleLinkItem.getString("description");
 
-					listOfLinks.add(new Link(singleComment, singleUrl));
+					listOfLinks.add(new Link(singleComment, singleUrl, singleDescription));
 				}
-				courseAndLinks.add(new Course("Newest L2P: "+c.toString(), listOfLinks));
+				courseAndLinks.add(new Course("Course id: "+cid+c.toString(), listOfLinks));
 			}
 		} catch (Exception e) {
 			CommonData.writeLog("Static Data Download", e);
@@ -80,6 +82,10 @@ public class StaticData {
 	}
 
 	public static class Link implements Serializable {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
 		public String description;
 		public String url;
 		public String name;
@@ -97,10 +103,10 @@ public class StaticData {
 			this.lastModified = lastModified;
 		}
 
-		public Link(String name, String url) {
-			this.description = url;
+		public Link(String comments, String url, String description) {
+			this.description = comments;
 			this.url = url;
-			this.name = name;
+			this.name = description;
 			isBookmarked = false;
 			this.group = "";
 			this.lastModified = new Date();
