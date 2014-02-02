@@ -33,7 +33,7 @@ public class LinkListActivity extends Activity {
     
     private class DownloadFilesTask extends AsyncTask<String, Void, String> {
         protected String doInBackground(String... urls) {
-            return "13ws-2014-Custom";
+            return "13ws-2014-ApiCalled";
         }
 
 
@@ -58,9 +58,15 @@ public class LinkListActivity extends Activity {
         getActionBar().setDisplayHomeAsUpEnabled(true);
         //Log.d(TAG,"Create");
         
-        String semesterNameApi = "http://137.226.231.116/websites/ws2014/_vti_bin/L2PServices/API.svc/v1/viewCourseInfo?accessToken=asdlk&cid=13ws-55503";
-        new DownloadFilesTask().execute(semesterNameApi);
-
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            String value = extras.getString("TITLE");
+            setTitle(value);
+        }else
+        {
+        	String semesterNameApi = "http://137.226.231.116/websites/ws2014/_vti_bin/L2PServices/API.svc/v1/viewCourseInfo?accessToken=asdlk&cid=13ws-55503";
+        	new DownloadFilesTask().execute(semesterNameApi);
+        }
         CommonData.writeLog("onCreate", "link list activity");
     }
     
