@@ -28,7 +28,6 @@ public class SplashScreen extends Activity {
                 // Start your app activity_threelevellisthead activity
             	Intent i = new Intent(SplashScreen.this, ProgressSandbox.class);
                 //Intent i = new Intent(SplashScreen.this, SelectCurrentSemesterCourse.class);
-                //Intent i = new Intent(SplashScreen.this, LinkListActivity.class);
                 startActivity(i);
  
                 // close this activity

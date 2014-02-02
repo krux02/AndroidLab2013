@@ -138,7 +138,7 @@ public class ProgressSandbox extends Activity {
 							response = "Access token found: " + temp;
 							httpOperationShouldContinue = false;
 							
-							Intent i = new Intent(ProgressSandbox.this, SelectCurrentSemesterCourse.class);
+							Intent i = new Intent(ProgressSandbox.this, LinkListActivity.class);
 				            startActivity(i);
 						}
 						break;
@@ -189,7 +189,6 @@ public class ProgressSandbox extends Activity {
 				ProgressSandbox.this);
 		String deviceCode = CommonData.getSingleValueFromKey("DEVICE_CODE",
 				ProgressSandbox.this);
-
 		oAuthManageButton.setVisibility(View.INVISIBLE);
 
 		if (accessToken.length() > 0) {
@@ -200,7 +199,7 @@ public class ProgressSandbox extends Activity {
 			progressBar.setVisibility(View.GONE);
 			CommonData.deleteSingleSharedPreference("DEVICE_CODE", ProgressSandbox.this);
 			
-			Intent i = new Intent(ProgressSandbox.this, SelectCurrentSemesterCourse.class);
+			Intent i = new Intent(ProgressSandbox.this, LinkListActivity.class);
             startActivity(i);
 			return;
 		} else if (deviceCode.length() > 0) {
