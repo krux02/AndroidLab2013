@@ -1,5 +1,10 @@
 package com.example.l2plabv0;
 
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+import java.util.Random;
+
 import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
@@ -10,11 +15,6 @@ import android.widget.BaseExpandableListAdapter;
 import android.widget.ExpandableListView;
 import android.widget.ImageButton;
 import android.widget.TextView;
-
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Random;
 
 /**
  * User: arne
@@ -105,6 +105,7 @@ public class LinkListAdapter extends BaseExpandableListAdapter implements Expand
                 if (link.isBookmarked) {
                     favorite.setImageResource(android.R.drawable.btn_star_big_off);
                     link.isBookmarked = false;
+                    
                 } else {
                     favorite.setImageResource(android.R.drawable.btn_star_big_on);
                     link.isBookmarked = true;

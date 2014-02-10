@@ -81,11 +81,13 @@ public class SelectSemester extends Activity {
 			@Override
 			public void onClick(View v) {
 
+				/*
 				Toast.makeText(
 						SelectSemester.this,
 						"OnClickListener : " + "\nSpinner 2 : "
 								+ String.valueOf(spinner2.getSelectedItem()),
 						Toast.LENGTH_SHORT).show();
+				 */
 				 Intent i = new Intent(SelectSemester.this, LinkListActivity.class);
 				 String semesterId = String.valueOf(spinner2.getSelectedItem());
 				 i.putExtra("TITLE", semesterId );
