@@ -23,7 +23,7 @@ public class NTLMAuthenticationGETorPOST extends AsyncTask<String, String, Strin
                     // Limit the credentials only to the specified domain and port
                     new AuthScope(AuthScope.ANY_HOST, AuthScope.ANY_PORT),
                     // Specify credentials, most of the time only user/pass is needed
-                    new NTCredentials("arnab", "Dev#123", "", "")
+                    new NTCredentials("Hassan\\administrator", "Hassan123", "", "")
             );
 			HttpGet get = new HttpGet(givenUrl);
 			HttpResponse responseGet = client.execute(get);

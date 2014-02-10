@@ -2,6 +2,7 @@ package com.example.l2plabv0;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
@@ -14,9 +15,12 @@ import org.json.JSONObject;
 public class StaticData {
 	public static List<Course> getCourseList() {
 
+		/*
 		String cid= "13ws-55503";
 		//String url = "http://137.226.231.116/websites/ws2014/_vti_bin/L2PServices/API.svc/v1/viewAllHyperlink?accessToken=asdlk&cid="+cid;
 		String url = "http://seoul.freehostia.com/file.json";
+		//String url = "http://137.226.231.112:11401/websites/testRest/_vti_bin/L2PServices/Api.svc/v1/viewAllHyperlink?accesstoken=asdbcd&p=return%20this";
+		
 		List<Course> courseAndLinks = new ArrayList<Course>();
 
 
@@ -45,7 +49,6 @@ public class StaticData {
 
 		return courseAndLinks;
 		
-		/*
 		// 
 		
 		List<Link> listOfLinks = new ArrayList<Link>();
@@ -56,7 +59,7 @@ public class StaticData {
 		return courseAndLinks;
 		*/
 		
-		/*
+		//*
 		  return Arrays.asList( new
 		  Course("languages for scientific computing", new Link("Matlab",
 		  "http://en.wikipedia.org/wiki/MATLAB"), new Link("Mathematica",
@@ -88,9 +91,10 @@ public class StaticData {
 		public String name;
 		public List<Link> topics;
 
-		public Course(String name, List<Link> listOfLinks) {
+		
+		public Course(String name, Link... listOfLinks) {
 			this.name = name;
-			this.topics = listOfLinks;
+			this.topics = new ArrayList<Link>(Arrays.asList(listOfLinks));
 		}
 
         @Override
